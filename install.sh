@@ -1,10 +1,12 @@
+#!/usr/bin/env bash
+
 echo "Installing brew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "Installing git"
 brew install git
 
-# TODO: ssh config?
+read -rsn1 -p"Restor private ssh keys and press any key to continue";echo
 
 echo "Cloning dotfiles repo"
 git clone https://github.com/kbeaulieu/dotfiles.git ~/.gitignore
@@ -14,7 +16,7 @@ echo "Executing brew bundle"
 brew bundle
 
 echo "Installing dotfiles"
-stow asdf fish git sublime terminal tldr tmux vim
+stow asdf fish git sublime terminal tldr tmux vim ssh
 
 echo "Installing asdf tools"
 (cd ~ && asdf intall)
