@@ -16,7 +16,7 @@ echo "Executing brew bundle"
 brew bundle
 
 echo "Installing dotfiles"
-stow asdf fish git sublime terminal tldr tmux vim ssh
+stow asdf fish git sublime terminal tldr tmux vim ssh gpg
 
 echo "Installing asdf tools"
 (cd ~ && asdf intall)
