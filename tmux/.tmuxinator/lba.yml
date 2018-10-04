@@ -1,0 +1,22 @@
+# ~/.tmuxinator/reso.yml
+
+name: lba
+root: ~/dev/arcbees/clients/lbagestionprivee
+pre: #docker-machine start && docker start postgres
+windows:
+  - server:
+      root: ~/dev/arcbees/clients/lbagestionprivee/backend
+      panes:
+        - mvn install && mvn exec:java
+  - sdk:
+      root: ~/dev/arcbees/clients/lbagestionprivee/sdk
+      panes:
+        - yarn start
+  - mobile:
+      root: ~/dev/arcbees/clients/lbagestionprivee/mobile
+      panes:
+        - rm -rf node_modules/@lba/sdk && npm i && yarn start
+  - web:
+      root: ~/dev/arcbees/clients/lbagestionprivee/web
+      panes:
+        - echo 'Hello'

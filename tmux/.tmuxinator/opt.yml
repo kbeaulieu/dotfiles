@@ -1,0 +1,28 @@
+# ~/.tmuxinator/opt.yml
+
+name: opt
+root: ~/dev/arcbees/clients/optop
+on_project_start: 
+  idea ~/dev/arcbees/clients/optop ;
+  open https://bitbucket.org/arcbees/optop/pull-requests/ ; 
+  open http://mobile.optop.local.arcbees.com:4200
+windows:
+  - root:
+      root: ~/dev/arcbees/clients/optop
+      layout: 8304,238x45,0,0{122x45,0,0,35,115x45,123,0[115x22,123,0,36,115x22,123,23,37]}
+      panes:
+        - cowsay 'Eye am ready!'
+        - wglog
+        - wgst
+  - backend:
+      root: ~/dev/arcbees/clients/optop/backend
+  - mobile:
+      root: ~/dev/arcbees/clients/optop/mobile
+      panes:
+        - yarn start
+  - admin:
+      root: ~/dev/arcbees/clients/optop/admin
+  - sdk:
+      root: ~/dev/arcbees/clients/optop/sdk
+      panes:
+        - yarn start

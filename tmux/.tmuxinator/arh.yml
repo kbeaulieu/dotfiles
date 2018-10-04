@@ -1,0 +1,13 @@
+# ~/.tmuxinator/arh.yml
+
+name: arh
+root: ~/dev/arcbees/clients/allie-rh
+windows:
+  - root:
+      root: ~/dev/arcbees/clients/allie-rh
+  - backend:
+      root: ~/dev/arcbees/clients/allie-rh/backend
+  - frontend:
+      root: ~/dev/arcbees/clients/allie-rh/frontend
+      panes:
+        - yarn start

@@ -1,0 +1,11 @@
+# ~/.tmuxinator/datak.yml
+
+name: Datak
+root: ~/kronos/projects
+windows:
+  - crm:
+      root: ~/kronos/projects/fullfinance
+  - ff:
+      root: ~/kronos/projects/kronos-crm
+  - dalake: 
+      root: ~/kronos/projects/dalake

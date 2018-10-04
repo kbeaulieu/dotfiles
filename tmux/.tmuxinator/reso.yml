@@ -1,0 +1,17 @@
+# ~/.tmuxinator/reso.yml
+
+name: reso
+root: ~/dev/arcbees/clients/bookenda
+windows:
+  - sdk:
+      root: ~/dev/arcbees/clients/bookenda/sdk
+      panes:
+        - npm start
+  - web:
+      root: ~/dev/arcbees/clients/bookenda/web
+      panes:
+        - ng s
+   - mobile:
+       root: ~/dev/arcbees/clients/bookenda/mobile
+       panes:
+         - ionic help 

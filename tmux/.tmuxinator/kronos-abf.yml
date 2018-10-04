@@ -1,0 +1,26 @@
+# ~/.tmuxinator/kronos.yml
+
+name: kronos
+root: ~/kronos
+pre: (cd ~/kronos/vagrant-files/ && vagrant up secure)
+startup_window: kronosFna
+windows:
+  - vagrant:
+      root: ~/kronos/vagrant-files
+      panes:
+        - vagrant ssh secure
+  - grunt:
+      root: ~/kronos/projects/kronos-fna
+      panes:
+        - grunt
+  - kronosFna:
+      root: ~/kronos/projects/kronos-fna
+      layout: 0d88,272x59,0,0{147x59,0,0,2,124x59,148,0[124x32,148,0,7,124x26,148,33,8]}
+      panes:
+        - cowsay "'Ready to Kronos!'"
+        - watch -tc git status -sb
+        - watch -tc git log --color --oneline --decorate --graph master~..@
+  - fnaEngine:
+      root: ~/kronos/projects/fna-engine
+      panes:
+        - git status

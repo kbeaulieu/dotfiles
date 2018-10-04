@@ -1,0 +1,15 @@
+# ~/.tmuxinator/arh-ci.yml
+
+name: arh-ci
+root: ~/dev/arcbees/clients/allie-rh
+windows:
+  - backend:
+      root: ~/dev/arcbees/clients/allie-rh/backend
+      panes:
+        - mvn clean test
+  - frontend:
+      root: ~/dev/arcbees/clients/allie-rh/frontend
+      panes:
+        - yarn lint
+        - yarn test
+        - yarn stylelint
