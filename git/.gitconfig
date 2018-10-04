@@ -1,0 +1,26 @@
+[credential]
+	helper = osxkeychain
+[core]
+	editor = vim
+[push]
+	default = current
+[color]
+	status = always
+[branch]
+	autoSetupMerge = always
+
+[include]
+	path = .gitconfig.personal
+
+[includeIf "gitdir:~/dev/arcbees/**"]
+	path = .gitconfig.arcbees
+
+[includeIf "gitdir:~/kronos/**"]
+	path = .gitconfig.kronos
+
+[alias]
+	co = checkout
+[commit]
+	gpgsign = true
+[user]
+	signingkey = C202CC00E382132C
