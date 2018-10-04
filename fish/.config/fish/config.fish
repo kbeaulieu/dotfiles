@@ -10,6 +10,7 @@ export JAVA_HOME=(asdf where java (asdf current java | gsed -e 's|\(.*\) \?(.*|\
 
 set -x FISH_HOME ~/.config/fish
 source $FISH_HOME/git.fish
+source $FISH_HOME/gnu.fish
 source $FISH_HOME/utils.fish
 
 # Disable shortening prompt pwd
