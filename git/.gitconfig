@@ -1,26 +1,24 @@
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [core]
-	editor = vim
+    editor = vim
 [push]
-	default = current
+    default = current
 [color]
-	status = always
+    status = always
 [branch]
-	autoSetupMerge = always
+    autoSetupMerge = always
+[commit]
+    gpgsign = true
 
 [include]
-	path = .gitconfig.personal
-
+    path = .gitconfig.personal
 [includeIf "gitdir:~/dev/arcbees/**"]
-	path = .gitconfig.arcbees
-
+    path = .gitconfig.arcbees
 [includeIf "gitdir:~/kronos/**"]
-	path = .gitconfig.kronos
+    path = .gitconfig.kronos
 
 [alias]
-	co = checkout
-[commit]
-	gpgsign = true
-[user]
-	signingkey = C202CC00E382132C
+    list-pr = ! hub pr list
+    co-pr = ! hub pr checkout
+    make-pr = ! hub pull-request
