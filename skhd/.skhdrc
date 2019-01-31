@@ -1,0 +1,65 @@
+# Change window mode between tiling / floating
+shift + alt - space : chunkc tiling::window --toggle float
+
+# Layout of desktop
+alt - a : chunkc tiling::desktop --layout bsp
+alt - s : chunkc tiling::desktop --layout monocle
+alt - d : chunkc tiling::desktop --layout float
+
+# Move focused window
+shift + alt - k : chunkc tiling::window --swap north
+shift + alt - l : chunkc tiling::window --swap east
+shift + alt - j : chunkc tiling::window --swap south
+shift + alt - h : chunkc tiling::window --swap west
+
+# Move focused window to desktop
+shift + alt - p : chunkc tiling::window --send-to-desktop prev
+shift + alt - n : chunkc tiling::window --send-to-desktop next
+shift + alt - 1 : chunkc tiling::window --send-to-desktop 1
+shift + alt - 2 : chunkc tiling::window --send-to-desktop 2
+shift + alt - 3 : chunkc tiling::window --send-to-desktop 3
+
+# Give focus to window
+alt - k : chunkc tiling::window --focus north
+alt - l : chunkc tiling::window --focus east
+alt - j : chunkc tiling::window --focus south
+alt - h : chunkc tiling::window --focus west
+
+# Give focus to monitor (--focus doesn't work)
+ctrl + alt - z  : chunkc tiling::monitor -f prev
+ctrl + alt - c : chunkc tiling::monitor -f next
+alt - 1 : chunkc tiling::monitor -f 1
+alt - 2 : chunkc tiling::monitor -f 2
+alt - 3 : chunkc tiling::monitor -f 3
+
+# Give focus to specific windows
+f12 : open -a Alacritty
+ctrl - f12 : open -a "IntelliJ IDEA Ultimate"
+shift - f12 : open -a "Firefox Developer Edition"
+shift - f13 : open -a Spotify
+shift - f14 : open -a Slack
+
+# Resize window
+shift + alt - a : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; \
+                  chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
+shift + alt - s : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; \
+                  chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
+shift + alt - w : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; \
+                  chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
+shift + alt - d : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; \
+                  chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
+
+# Rotate layout
+alt - r : chunkc tiling::desktop --rotate 90
+
+
+# toggle window parent zoom
+alt - z : chunkc tiling::window --toggle parent
+
+# toggle window split type
+ctrl + alt - s : chunkc tiling::window --toggle split
+
+
+# system
+ctrl + alt - q : open -a ScreenSaverEngine
+

@@ -9,8 +9,6 @@
 1. Look if there is something useful in `global-packages/*.deps.txt` files
 
 ## Todo
-- Add skhd dotfiles
-- Add chunkwm dotfiles
 - Alacritty and remove itemr2
 - Intellij
 - Sublime
