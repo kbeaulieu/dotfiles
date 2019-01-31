@@ -1,0 +1,21 @@
+# ~/.tmuxinator/kronos.yml
+
+name: Kronos
+root: ~/kronos/projects
+windows:
+  - ff:
+      root: ~/kronos/projects/fullfinance
+        - git status -sb; yarn outdated
+  - dalake:
+      root: ~/kronos/projects/dalake
+      panes:
+        - # ./gradlew dependencyUpdates
+  - dabench:
+      root: ~/kronos/projects/dabench
+      panes:
+        - git status -sb; cd web; yarn outdated
+        - cd backend; # ./gradlew dependencyUpdates
+  - std:
+      root: ~/kronos/projects/standards
+      panes:
+        - git status -sb

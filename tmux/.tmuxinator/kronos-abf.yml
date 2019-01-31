@@ -1,4 +1,4 @@
-# ~/.tmuxinator/kronos.yml
+# ~/.tmuxinator/kronos-abf.yml
 
 name: kronos
 root: ~/kronos
@@ -17,7 +17,6 @@ windows:
       root: ~/kronos/projects/kronos-fna
       layout: 0d88,272x59,0,0{147x59,0,0,2,124x59,148,0[124x32,148,0,7,124x26,148,33,8]}
       panes:
-        - cowsay "'Ready to Kronos!'"
         - watch -tc git status -sb
         - watch -tc git log --color --oneline --decorate --graph master~..@
   - fnaEngine:

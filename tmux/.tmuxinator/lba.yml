@@ -1,4 +1,4 @@
-# ~/.tmuxinator/reso.yml
+# ~/.tmuxinator/lba.yml
 
 name: lba
 root: ~/dev/arcbees/clients/lbagestionprivee
