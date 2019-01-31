@@ -1,2 +1,0 @@
-/Users/kevenbeaulieu/.asdf/installs/nodejs/10.15.0/.npm/lib
-└── (empty)
