@@ -2,6 +2,7 @@
     helper = osxkeychain
 [core]
     editor = vim
+    excludesfile = ~/.gitglobalignore
 [push]
     default = current
 [color]
@@ -9,7 +10,7 @@
 [branch]
     autoSetupMerge = always
 [commit]
-    gpgsign = true
+    # gpgsign = true
 
 [include]
     path = .gitconfig.personal
