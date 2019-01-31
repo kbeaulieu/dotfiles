@@ -1,3 +1,2 @@
 /usr/local/opt/asdf/installs/nodejs/10.8.0/.npm/lib
 └── (empty)
-
