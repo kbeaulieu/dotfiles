@@ -1,11 +1,15 @@
-yarn global v1.10.1
+yarn global v1.13.0
 info "@angular/cli@1.7.4" has binaries:
    - ng
+info "depcheck@0.6.11" has binaries:
+   - depcheck
 info "pomd@2.3.4" has binaries:
    - pomd
 info "speed-test@2.0.0" has binaries:
    - speed-test
+info "splash-cli@3.3.3-0" has binaries:
+   - splash
 info "typescript@2.9.2" has binaries:
    - tsc
    - tsserver
-Done in 0.96s.
+Done in 1.11s.

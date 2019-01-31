@@ -1,2 +1,2 @@
-/usr/local/opt/asdf/installs/nodejs/10.8.0/.npm/lib
+/Users/kevenbeaulieu/.asdf/installs/nodejs/10.15.0/.npm/lib
 └── (empty)
