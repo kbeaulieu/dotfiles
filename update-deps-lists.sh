@@ -2,7 +2,7 @@
 
 ### Homebrew ###
 echo -e "🍺 Homebrew"
-#brew bundle dump --force
+brew bundle dump --force
 
 ### Globals ###
 globalFile=./global-deps.txt

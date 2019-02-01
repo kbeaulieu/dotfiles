@@ -9,7 +9,7 @@
 1. Look if there is something useful in `global-packages/*.deps.txt` files
 
 ## Todo
-- Alacritty and remove itemr2
+- Alacritty and remove iterm2
 - Intellij
 - Sublime
 - Backup Keybase?
