@@ -1,6 +1,7 @@
-if not test -f ~/.config/fish/functions/fisher.fish
-    curl -sLo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
-    fisher
+if not functions -q fisher
+    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    fish -c fisher
 end
 
 # PATH
@@ -23,6 +24,7 @@ source $FISH_HOME/secrets.fish
 source $FISH_HOME/git.fish
 source $FISH_HOME/gnu.fish
 source $FISH_HOME/utils.fish
+source $FISH_HOME/prompt.fish
 
 # Kronos
 export PATH="$PATH:$HOME/bin"
