@@ -5,6 +5,7 @@ root: ~/kronos/projects
 windows:
   - ff:
       root: ~/kronos/projects/fullfinance
+      panes:
         - git status -sb; yarn outdated
   - dalake:
       root: ~/kronos/projects/dalake

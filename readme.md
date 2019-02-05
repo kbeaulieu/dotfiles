@@ -15,3 +15,8 @@
 - Backup Keybase?
 - Other desktop app preferences in `~/Library/Preferences/`?
 - .osx (see Paul Irish dotfiles)
+
+## Useful Links
+- [https://github.com/webpro/awesome-dotfiles](https://github.com/webpro/awesome-dotfiles)
+- [https://dotfiles.github.io/](https://dotfiles.github.io/)
+- [https://github.com/paulirish/dotfiles](https://github.com/paulirish/dotfiles)
