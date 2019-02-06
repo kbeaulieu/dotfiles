@@ -14,6 +14,7 @@ export JAVA_HOME=/Users/kevenbeaulieu/.asdf/installs/java/oracle-8.191 # /openjd
 # Fish
 ## Disable shortening prompt pwd
 set -g fish_prompt_pwd_dir_length 0
+set -g fish_greeting "><>"
 
 # asdf-vm
 source /usr/local/opt/asdf/asdf.fish
