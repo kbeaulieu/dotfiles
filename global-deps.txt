@@ -17,7 +17,7 @@ info "splash-cli@3.3.3-0" has binaries:
 info "typescript@2.9.2" has binaries:
    - tsc
    - tsserver
-Done in 0.49s.
+Done in 0.51s.
 
 
 💎 gem
