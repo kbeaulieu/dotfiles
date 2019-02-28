@@ -10,13 +10,14 @@
 
 ## Todo
 - Alacritty and remove iterm2
-- Intellij
-- Sublime
+- amp
+- Intellij?
+- Sublime Text
 - Backup Keybase?
 - Other desktop app preferences in `~/Library/Preferences/`?
 - .osx (see Paul Irish dotfiles)
 
 ## Useful Links
-- [https://github.com/webpro/awesome-dotfiles](https://github.com/webpro/awesome-dotfiles)
-- [https://dotfiles.github.io/](https://dotfiles.github.io/)
-- [https://github.com/paulirish/dotfiles](https://github.com/paulirish/dotfiles)
+- [webpro/awesome-dotfiles](https://github.com/webpro/awesome-dotfiles)
+- [](https://dotfiles.github.io/)
+- [paulirish/dotfiles](https://github.com/paulirish/dotfiles)
