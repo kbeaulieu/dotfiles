@@ -58,6 +58,10 @@ chunkc set window_region_locked          1
 # Plugins
 chunkc core::load tiling.so
 
+chunkc core::load border.so
+chunkc set focused_border_color 0xaacccccc
+chunkc set focused_border_width 2
+
 # Windows rules
 chunkc tiling::rule --owner Finder --name Copy --state float &
 chunkc tiling::rule --owner Calendar --state float &
