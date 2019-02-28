@@ -6,6 +6,7 @@ end
 
 # PATH
 export PATH="/Users/kevenbeaulieu/.local/bin:$PATH"
+export PATH="/Users/kevenbeaulieu/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Global env
 export EDITOR=vim
@@ -25,7 +26,7 @@ source $FISH_HOME/secrets.fish
 source $FISH_HOME/git.fish
 source $FISH_HOME/gnu.fish
 source $FISH_HOME/utils.fish
-source $FISH_HOME/prompt.fish
+source $FISH_HOME/prompt-small.fish
 
 # Kronos
 export PATH="$PATH:$HOME/bin"

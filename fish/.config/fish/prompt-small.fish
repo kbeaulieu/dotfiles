@@ -6,7 +6,7 @@ function __prompt_git -d "Display the actual git branch"
 
   if git_is_repo; and test -z $is_dot_git
     printf 'on '
-    set_color red
+    set_color cyan
 
     set -l git_branch (command git symbolic-ref --quiet --short HEAD 2> /dev/null; or git rev-parse --short HEAD 2> /dev/null; or echo -n '(unknown)')
 
@@ -39,7 +39,7 @@ end
 
 # Get Project Working Directory
 function __prompt_pwd -d "Get PWD"
-  set_color $fish_color_cwd
+  set_color blue #$fish_color_cwd
   printf '%s ' (prompt_pwd)
 end
 
@@ -47,14 +47,14 @@ function fish_prompt
   set -l code $status
 
   # Logged in user
-  __prompt_get_user
-  set_color normal
-  printf ' at '
+  #__prompt_get_user
+  #set_color normal
+  #printf ' at '
 
   # Machine logged in to
-  __prompt_get_host
-  set_color normal
-  printf ' in '
+  #__prompt_get_host
+  #set_color normal
+  #printf ' in '
 
   # Path
   __prompt_pwd
@@ -68,6 +68,7 @@ function fish_prompt
   end
 
   # ›λ❯ 
-  printf '\n❯ '
+  #printf '\nλ '
+  printf '❯ '
   set_color normal
 end

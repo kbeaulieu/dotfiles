@@ -7,6 +7,7 @@ abbr l 'ls -la'
 alias cdr 'ranger --choosedir $HOME/.rangerdir; LASTDIR `cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias ppp 'echo $PATH | tr ":" "\n"'
 alias tvim 'set TERM screen-256color; /usr/local/bin/vim'
+alias mdv 'mdv -t 665.9171 -T 665.9171'
 
 # Fish
 alias frc 'vim ~/.config/fish/config.fish; and source ~/.config/fish/config.fish'
@@ -16,6 +17,9 @@ alias sfrc 'source ~/.config/fish/config.fish'
 # Abbreviations
 abbr mux tmuxinator
 abbr dk docker
+abbr dki "docker image"
+abbr dkc "docker container"
+abbr kc kubectl
 abbr gw "./gradlew"
 abbr jp jump
 
