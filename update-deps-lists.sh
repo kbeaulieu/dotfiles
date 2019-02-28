@@ -11,6 +11,7 @@ gyarn="🧶  yarn"
 ggem="💎 gem"
 gpip="🐍 pip"
 gpip3="🐍 pip3"
+gcargo="🚢 cargo"
 
 echo -e "\n\n$gnpm"
 echo -e "$gnpm" > $globalFile
@@ -31,3 +32,8 @@ pip list --not-required >> $globalFile
 echo -e "\n\n$gpip3"
 echo -e "\n\n$gpip3" >> $globalFile
 pip3 list --not-required >> $globalFile
+
+echo -e "\n\n$gcargo"
+echo -e "\n\n$gcargo" >> $globalFile
+cargo install --list
+
