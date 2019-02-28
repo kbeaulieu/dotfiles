@@ -1,0 +1,10 @@
+# ~/.tmuxinator/others.yml
+
+name: Others
+root: ~/
+attach: false
+windows:
+  - dotfiles: 
+    root: ~/.dotfiles
+  - playground:
+    root: ~/dev/playground

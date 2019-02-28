@@ -3,10 +3,6 @@
 name: Kronos
 root: ~/kronos/projects
 windows:
-  - ff:
-      root: ~/kronos/projects/fullfinance
-      panes:
-        - git status -sb; yarn outdated
   - dalake:
       root: ~/kronos/projects/dalake
       panes:
@@ -16,6 +12,10 @@ windows:
       panes:
         - git status -sb; cd web; yarn outdated
         - cd backend; # ./gradlew dependencyUpdates
+  - ff:
+      root: ~/kronos/projects/fullfinance
+      panes:
+        - git status -sb; yarn outdated
   - std:
       root: ~/kronos/projects/standards
       panes:
