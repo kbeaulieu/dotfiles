@@ -4,4 +4,3 @@ Haskell for mac
 Irvue
 Pocket
 SnippetsLab
-

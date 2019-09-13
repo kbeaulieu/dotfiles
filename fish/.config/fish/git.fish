@@ -24,13 +24,12 @@ if set -q fish_initialized
     abbr gcb "git checkout -b"
 
     abbr gd "git diff"
-    abbr gdca "git diff --cached"
-    abbr gdt "git diff-tree --no-commit-id --name-only -r"
-    abbr gdw "git diff --word-diff"
+    abbr gdc "git diff --cached"
+    abbr gdt "icdiff -s"
+    abbr gdtc "icdiff -s --cached"
     abbr gwd "git webdiff"
     abbr gwdc "git webdiff --cached"
 
-    abbr gf "git fetch"
     abbr gfa "git fetch --all --prune"
     abbr gfo "git fetch origin"
 

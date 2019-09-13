@@ -5,7 +5,6 @@ abbr cd.... 'cd ../../../'
 abbr cd..... 'cd ../../../../'
 abbr l 'ls -la'
 alias cdr 'ranger --choosedir $HOME/.rangerdir; LASTDIR `cat $HOME/.rangerdir`; cd "$LASTDIR"'
-alias ppp 'echo $PATH | tr ":" "\n"'
 alias tvim 'set TERM screen-256color; /usr/local/bin/vim'
 alias mdv 'mdv -t 665.9171 -T 665.9171'
 
@@ -21,7 +20,9 @@ abbr dki "docker image"
 abbr dkc "docker container"
 abbr kc kubectl
 abbr gw "./gradlew"
+abbr ugw "./gradlew wrapper --gradle-version"
 abbr jp jump
+abbr tf terraform
 
 function portPid
     lsof -n -i:$argv[1] | sed -n 2p | awk '{ print $2 }'

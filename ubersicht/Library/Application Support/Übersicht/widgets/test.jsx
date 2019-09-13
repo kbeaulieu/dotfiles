@@ -1,21 +1,35 @@
-import { run } from 'uebersicht'
 import { css } from "uebersicht"
 
-export const refreshFrequency = 1000
+export const refreshFrequency = 1000;
 
-export const command = dispatch => dispatch({ type: 'TIME', data: new Date() })
+export const command = 'echo $(date "+%d %H:%M")@$(pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f1 -d"%")';
 
-export const updateState = (event, previousState) => {
-  switch(event.type) {
-    case 'TIME': return new Date()
-    default: return previousState
-  }
-}
+export const className = `
+  right: 20px;
+`;
+
 
 const time = css`
   font-family: Fira Code;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.3);
-`
+  color: rgba(255, 255, 255, 0.4);
+  //color: rgba(0, 0, 0, 0.4);
 
-export const render = (a) => <span className={time}>{a.toString()}</span>
+  span {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+`;
+
+export function render({ output, error }) {
+    const [
+        date,
+        batteryLevel
+    ] = output.split('@');
+
+    return (
+        <span className={time}>
+            <span>{date}</span>|<span className="battery">{batteryLevel}</span>
+        </span>
+    );
+}

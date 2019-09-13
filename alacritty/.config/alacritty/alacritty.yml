@@ -7,7 +7,7 @@ window:
     y: 2
   dynamic_padding: false
   decorations: none
-  start_maximized: false
+  startup_mode: Maximized
 
 scrolling:
   history: 10000
@@ -28,11 +28,13 @@ font:
     y: 0
   use_thin_strokes: true
 
-render_timer: false
-persistent_logging: false
+debug:
+  render_timer: false
+  persistent_logging: false
+
 draw_bold_text_with_bright_colors: true
 
-# Colors (Base16 Default Dark)
+# Colors (onedark)
 colors:
   primary:
     background: '0x282c34'
@@ -95,8 +97,10 @@ alt_send_esc: false
 key_bindings:
   - { key: Paste,                   action: Paste                        }
   - { key: Copy,                    action: Copy                         }
-  - { key: L,        mods: Control, action: ClearLogNotice               }
-  - { key: L,        mods: Control, chars: "\x0c"                        }
+  - { key: L,     mods: Control,    action: ClearLogNotice               }
+  - { key: C,     mods: Alt,        chars: "\x1bc"                       }
+  - { key: C,     mods: Alt|Shift,  chars: "\x1bC"                       }
+  - { key: L,     mods: Control,    chars: "\x0c"                        }
   - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
   - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
   - { key: End,                     chars: "\x1bOF",   mode: AppCursor   }

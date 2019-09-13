@@ -1,7 +1,7 @@
 # ~/.tmuxinator/others.yml
 
 name: Others
-root: ~/
+root: ~
 attach: false
 windows:
   - dotfiles: 

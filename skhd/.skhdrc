@@ -38,6 +38,7 @@ ctrl - f12 : open -a "IntelliJ IDEA Ultimate"
 shift - f12 : open -a "Firefox Developer Edition"
 shift - f13 : open -a Spotify
 shift - f14 : open -a Slack
+ctrl - f1 : open -a Dash
 
 # Resize window
 shift + alt - a : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; \
