@@ -23,11 +23,15 @@ set -g fish_greeting ""
 # asdf-vm
 source /usr/local/opt/asdf/asdf.fish
 
+# Direnv
+direnv hook fish | source
+
 # Modules
 set -x FISH_HOME ~/.config/fish
+source $FISH_HOME/key-bindings.fish
 source $FISH_HOME/secrets.fish
-source $FISH_HOME/git.fish
-source $FISH_HOME/gnu.fish
 source $FISH_HOME/utils.fish
+source $FISH_HOME/gnu.fish
+source $FISH_HOME/git.fish
 source $FISH_HOME/prompt-small.fish
 source $FISH_HOME/equisoft.fish

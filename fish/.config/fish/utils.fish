@@ -16,8 +16,9 @@ alias sfrc 'source ~/.config/fish/config.fish'
 # Abbreviations
 abbr mux tmuxinator
 abbr dk docker
-abbr dki "docker image"
-abbr dkc "docker container"
+abbr dc docker-compose
+abbr dpg "docker run --label pg -it"
+abbr dppg "docker container prune --filter=\"label=pg\""
 abbr kc kubectl
 abbr gw "./gradlew"
 abbr ugw "./gradlew wrapper --gradle-version"
@@ -30,6 +31,10 @@ end
 
 function topPort
     htop -p (portPid $argv[1])
+end
+
+function killPort
+    kill $argv[2..10] (portPid $argv[1])
 end
 
 ### fixme ###
