@@ -11,9 +11,9 @@ set PATH \
     $PATH
 
 # Global env
-set -gx EDITOR vim
+set -gx EDITOR kak
 set -gx JAVA_HOME /Users/kevenbeaulieu/.asdf/installs/java/openjdk-11.0.1/Contents/Home
-set -gx IDRIS_LIBRARY_PATH (asdf where idris)/share/x86_64-osx-ghc-8.6.3/idris-1.3.2/libs
+# set -gx IDRIS_LIBRARY_PATH (asdf where idris)/share/x86_64-osx-ghc-8.6.3/idris-1.3.2/libs
 
 # Fish
 ## Configs
