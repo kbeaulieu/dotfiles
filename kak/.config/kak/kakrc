@@ -1,0 +1,7 @@
+# add-highlighter global/ number-lines
+
+# plug.kak installation
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+# Plugins
+plug "stoand/kakoune-idris"
+

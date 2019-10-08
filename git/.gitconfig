@@ -1,8 +1,7 @@
 [credential]
     helper = osxkeychain
 [core]
-    editor = vim
-    excludesfile = ~/.gitglobalignore
+    excludesfile = ~/.gitignore-global
 [push]
     default = current
 [color]
@@ -11,15 +10,67 @@
     autoSetupMerge = always
 [commit]
     # gpgsign = true
+[rebase]
+    autosquash = true
 
 [include]
-    path = .gitconfig.personal
-[includeIf "gitdir:~/dev/arcbees/**"]
-    path = .gitconfig.arcbees
+    path = .gitconfig-personal.secret
 [includeIf "gitdir:~/kronos/**"]
-    path = .gitconfig.kronos
+    path = .gitconfig-equisoft.secret
 
 [alias]
-    list-pr = ! hub pr list
-    co-pr = ! hub pr checkout
-    make-pr = ! hub pull-request
+    # Branch
+    b = branch
+    # Pull
+    l = pull
+    lrom = pull --rebase origin master
+    # Push
+    p = push
+    # Fetch
+    f = fetch --all --prune
+    # Rebase
+    rb = rebase      
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbi = rebase -i
+    rbim = rebase -i master
+    # Diff
+    d = diff
+    dc = diff --cached
+    yd = ! ydiff -s --color=always -w 120 -t 4 --wrap | less -r
+    ydc = ! ydiff -s --color=always -w 120 -t 4 --wrap -- --cached | less -r
+    # Checkout
+    co = checkout
+    cob = checkout -b
+    # Add
+    a = add
+    aa = add --all
+    # Commit
+    c = commit
+    ca = commit -a
+    caa = commit -a --amend
+    cna = commit --no-edit --amend
+    cana = commit -a --no-edit --amend
+    # Status
+    st = status
+    sb = status -sb
+    # Log
+    lgs = log --oneline --decorate --color --graph --exclude=refs/stash
+    lgsa = lg --all
+    lg = lgs --pretty=format:'%C(yellow) %h%C(auto)%d%Creset %s %Cgreen%cr%Creset by %Cblue%cN%Creset'
+    lga = lg --all
+    # Show
+    s = show --pretty=format:'%C(yellow)%h%C(auto)%d %cd %Cgreen(%cr)%Creset by %C(blue)%cN%Creset%n%s%n' --date=short --diff-algorithm=minimal
+    ss = s --compact-summary
+    # Files
+    ignored = ! git ls-files -v | grep "^[[:lower:]]"
+    # Others
+    xxignore = update-index --assume-unchanged
+    xxwch = whatchanged -p --abbrev-commit --pretty=medium
+    wip = ! git add -A; git rm (git ls-files --deleted) 2> /dev/null; git commit -m "--wip--"
+    unwip = ! git log -n 1 | grep -q -c "--wip--" && git reset HEAD~1
+    # Github PR
+    pr = ! hub pull-request
+    pr-ls = ! hub pr list
+    pr-co = ! hub pr checkout
+

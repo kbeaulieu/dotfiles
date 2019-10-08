@@ -1,6 +1,0 @@
-Ableton Live
-Antidote
-Haskell for mac
-Irvue
-Pocket
-SnippetsLab

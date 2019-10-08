@@ -1,0 +1,7 @@
+#!/usr/bin/env fish
+
+set -l command "git branch --set-upstream-to=origin/(git_branch_name)"
+
+echo Command : $command
+
+eval $command

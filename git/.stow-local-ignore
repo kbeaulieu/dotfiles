@@ -1,2 +1,2 @@
-.gitconfig.*.asc
-.gitignore
+*.asc
+encrypt.sh

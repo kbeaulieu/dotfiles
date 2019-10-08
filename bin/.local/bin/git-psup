@@ -1,0 +1,7 @@
+#!/usr/bin/env fish
+
+set -l command "git push --set-upstream origin (git_branch_name)"
+
+echo Command : $command
+
+eval $command

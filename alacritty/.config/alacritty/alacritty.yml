@@ -100,6 +100,8 @@ key_bindings:
   - { key: L,     mods: Control,    action: ClearLogNotice               }
   - { key: C,     mods: Alt,        chars: "\x1bc"                       }
   - { key: C,     mods: Alt|Shift,  chars: "\x1bC"                       }
+  - { key: I,     mods: Alt,        chars: "\x1bi"                       }
+  - { key: F,     mods: Alt,        chars: "\x1bf"                       }
   - { key: L,     mods: Control,    chars: "\x0c"                        }
   - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
   - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
