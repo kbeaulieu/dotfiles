@@ -20,6 +20,7 @@ abbr -g cd.. 'cd ../'
 abbr -g cd... 'cd ../../'
 abbr -g cd.... 'cd ../../../'
 abbr -g cd..... 'cd ../../../../'
+abbr -g cd...... 'cd ../../../../../'
 alias cdr 'ranger --choosedir $HOME/.rangerdir; LASTDIR `cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
 
@@ -35,15 +36,23 @@ function lg --wraps exa
     eval {exa -lG $EXA_DEFAULTS} $argv
 end
 
-function lt --wraps exa
-    eval {exa -lT -L=$argv[1] $EXA_DEFAULTS} $argv[2..-1]
+function lt --wraps exa -a depth
+    eval {exa -lT -L=$depth $EXA_DEFAULTS} $argv[2..-1]
 end
 
 
 ###
-# Custom commands for Docker (like git)
-# Create a `docker-foo` executable file available in your $PATH, a function or an alias
-# Than execute it with `docker foo`
+# Extends any program with custom commands (like git)
+# Example with Docker:
+#     Create a wrapping function for docker:
+#         function docker --wraps docker
+#             extend_command docker $argv
+#         end
+#     Create a `docker-foo` executable file available in your $PATH, a function or an alias:
+#         function docker-foo
+#             echo bar
+#         end
+#     Than execute it with `docker foo`
 function extend_command
     set prog $argv[1]
     set cmd $argv[2]
@@ -62,3 +71,4 @@ function extend_command
         command $prog $cmd
     end
 end
+
