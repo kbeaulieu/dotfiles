@@ -28,3 +28,11 @@
 - Irvue
 - Pocket
 - SnippetsLab
+
+## Manual backup
+### Firefox
+- FirefoxColor : localStorage
+- /Users/kevenbeaulieu/Library/Application Support/Firefox/Profiles/dysns4ag.dev-edition-default
+    - containers.json
+
+- 
