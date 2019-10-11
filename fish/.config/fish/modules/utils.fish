@@ -40,6 +40,10 @@ function lt --wraps exa -a depth
     eval {exa -lT -L=$depth $EXA_DEFAULTS} $argv[2..-1]
 end
 
+function l1 --wraps exa
+    eval {exa -1 $EXA_DEFAULTS} $argv
+end
+
 
 ###
 # Extends any program with custom commands (like git)
