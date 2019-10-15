@@ -61,6 +61,7 @@ function extend_command
     set prog $argv[1]
     set cmd $argv[2]
     set bin $prog-$cmd
+    set remaining_args $argv[3..-1]
 
     if type -q $bin
         set -l extended_command $bin $argv[3..-1]
@@ -72,7 +73,7 @@ function extend_command
 
         eval $extended_command
     else
-        command $prog $cmd
+        command $prog $cmd $remaining_args
     end
 end
 

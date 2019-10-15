@@ -61,7 +61,7 @@
     sb = status -sb
     # Log
     lgs = log --oneline --decorate --color --graph --exclude=refs/stash
-    lgsa = lg --all
+    lgsa = lgs --all
     lg = lgs --pretty=format:'%C(yellow) %h%C(auto)%d%Creset %s %Cgreen%cr%Creset by %Cblue%cN%Creset'
     lga = lg --all
     # Show
