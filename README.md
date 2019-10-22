@@ -11,10 +11,13 @@
 ## Todo
 - Intellij?
 - Sublime Text
-- Backup Keybase?
+- VSCode
+    - ~/Library/Application Support/Code/Users/{*.json,snippets/*}
+    - `code --list-extensions | xargs -L 1 echo code --install-extension > install-code-ext.sh` ??
 - Other desktop app preferences in `~/Library/Preferences/`?
   - firefox
 - .osx (see Paul Irish dotfiles)
+- Global haskell packages : `stack exec ghc-pkg -- list` (hlint, hoogle, idrin, ...)
 
 ## Useful Links
 - [webpro/awesome-dotfiles](https://github.com/webpro/awesome-dotfiles)
@@ -34,5 +37,3 @@
 - FirefoxColor : localStorage
 - /Users/kevenbeaulieu/Library/Application Support/Firefox/Profiles/dysns4ag.dev-edition-default
     - containers.json
-
-- 
