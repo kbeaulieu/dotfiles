@@ -4,4 +4,4 @@
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 # Plugins
 plug "stoand/kakoune-idris"
-
+plug "nhey/kakoune-fsharp"
