@@ -1,3 +1,6 @@
 -- Allows multilines in let block: let add :: Int -> Int -> Int \n [4 spaces] add = x + y
 :set +m
 
+-- Display the type of each variable bound after a statement is entered at the prompt. If the statement is a single expression, then the only variable binding will be for the variable ‘it’
+:set +t 
+
