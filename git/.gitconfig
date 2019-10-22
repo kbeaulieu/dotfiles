@@ -7,6 +7,7 @@
 [color]
     status = always
 [branch]
+    default = current
     autoSetupMerge = always
 [commit]
     # gpgsign = true
