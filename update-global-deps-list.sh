@@ -8,8 +8,6 @@ brew bundle dump --force
 globalFile=./global-deps.txt
 gnpm="🐻 npm"
 gyarn="🧶 yarn"
-ggem="💎 gem"
-gpip="🐍 pip"
 gpip3="🐍 pip3"
 gcargo="🚢 cargo"
 
@@ -24,10 +22,6 @@ yarn global list >> $globalFile
 echo -e "$ggem"
 echo -e "\n\n$ggem" >> $globalFile
 gem list >> $globalFile
-
-echo -e "$gpip"
-echo -e "\n\n$gpip" >> $globalFile
-pip list --not-required >> $globalFile
 
 echo -e "$gpip3"
 echo -e "\n\n$gpip3" >> $globalFile
