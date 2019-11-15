@@ -1,6 +1,18 @@
 -- Allows multilines in let block: let add :: Int -> Int -> Int \n [4 spaces] add = x + y
 :set +m
 
--- Display the type of each variable bound after a statement is entered at the prompt. If the statement is a single expression, then the only variable binding will be for the variable ‘it’
+-- Display the type of each variable bound after a statement is entered at the prompt
 :set +t 
 
+-- Prompt without loaded modules
+-- :set prompt "\ESC[34mλ> \ESC[m"
+
+-- Prompt with loaded modules on different lines
+:set prompt "\ESC[1;34m%s\n\ESC[0;34mλ> \ESC[m"
+
+-- Pretty Print
+:set -package pretty-simple
+-- pPrint $ MyRecord 1 "a"
+import Text.Pretty.Simple (pPrint)
+-- Use pPrint by default for output
+:set -interactive-print=Text.Pretty.Simple.pPrint

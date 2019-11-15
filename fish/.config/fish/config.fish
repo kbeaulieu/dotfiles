@@ -23,6 +23,7 @@ set -U FZF_PREVIEW_FILE_CMD "bat --color=always --style=numbers --line-range :30
 set -U FZF_DEFAULT_COMMAND "fd --type f --hidden --exclude .git"
 set -U FZF_FIND_FILE_COMMAND "fd --type f --hidden --exclude .git"
 set -U FZF_OPEN_COMMAND "fd --type f --hidden --exclude .git"
+set -u FZF_DEFAULT_OPTS "--height 40"
 # Customs
 set -gx MARKDOWN_VIEWER mdcat
 set -gx KAK_SESSION default
@@ -41,3 +42,4 @@ direnv hook fish | source
 for i in (command ls $__fish_config_dir/modules/*.fish)
     source $i
 end
+

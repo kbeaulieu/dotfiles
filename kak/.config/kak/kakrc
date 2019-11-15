@@ -3,5 +3,10 @@
 # plug.kak installation
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 # Plugins
+plug "andreyorst/smarttab.kak"
 plug "stoand/kakoune-idris"
 plug "nhey/kakoune-fsharp"
+
+hook global WinCreate ^[^*]+$ %{editorconfig-load}
+hook global WinSetOption filetype=*  expandtab
+

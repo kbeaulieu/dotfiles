@@ -22,6 +22,9 @@ abbr -g cd.... 'cd ../../../'
 abbr -g cd..... 'cd ../../../../'
 abbr -g cd...... 'cd ../../../../../'
 alias cdr 'ranger --choosedir $HOME/.rangerdir; LASTDIR `cat $HOME/.rangerdir`; cd "$LASTDIR"'
+function cdp -d "cd to PROJECT_HOME directory which is usually defined in a .envrc file at the root of a project"
+    cd $PROJECT_HOME
+end
 
 
 ###

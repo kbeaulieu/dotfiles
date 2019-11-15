@@ -1,0 +1,23 @@
+#!/usr/bin/env fish
+
+set_color blue; echo "Amend WIP commit and force a push"; set_color normal
+
+set_color green; echo "git unwip"; set_color normal
+git unwip
+
+set_color green; echo "git wip"; set_color normal
+git wip
+
+set_color --bold red
+echo "Wanna push --force ?"
+read -n 1 -P "[yN]: " choice
+set_color normal
+
+switch $choice
+    case y
+        set_color --bold red; echo "Force pushing"; set_color normal
+        git push --force
+    case "*"
+        echo "Skipping force push"
+end
+

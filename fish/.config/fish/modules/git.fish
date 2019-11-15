@@ -8,3 +8,17 @@ function gitrepl
         eval $line
     end
 end
+
+function git-awip-fp
+    git awip
+
+    read -p "Wanna push --force ? (yes): " choice
+
+    switch $choice
+        case "yes"
+            echo "Force pushing"
+            git push --force
+        case *
+            echo "Skipping force push"
+    end
+end
