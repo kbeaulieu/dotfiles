@@ -1,0 +1,58 @@
+{
+  "theme": {
+    "colors": {
+      "toolbar": {
+        "r": 228,
+        "g": 228,
+        "b": 228,
+        "a": 1
+      },
+      "toolbar_text": {
+        "r": 46,
+        "g": 50,
+        "b": 60
+      },
+      "frame": {
+        "r": 236,
+        "g": 236,
+        "b": 236
+      },
+      "tab_background_text": {
+        "r": 46,
+        "g": 50,
+        "b": 60
+      },
+      "toolbar_field": {
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 0.7
+      },
+      "toolbar_field_text": {
+        "r": 46,
+        "g": 50,
+        "b": 60
+      },
+      "tab_line": {
+        "r": 238,
+        "g": 238,
+        "b": 238
+      },
+      "popup": {
+        "r": 236,
+        "g": 236,
+        "b": 236
+      },
+      "popup_text": {
+        "r": 46,
+        "g": 50,
+        "b": 60
+      }
+    },
+    "images": {
+      "additional_backgrounds": []
+    },
+    "title": "008"
+  },
+  "modified": 1570566302683
+}

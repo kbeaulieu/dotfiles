@@ -11,8 +11,8 @@ export const className = `
 const time = css`
   font-family: Fira Code;
   font-size: 12px;
-  //color: rgba(255, 255, 255, 0.4);
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.4);
+  //color: rgba(0, 0, 0, 0.4);
 
   span {
     margin-left: 5px;

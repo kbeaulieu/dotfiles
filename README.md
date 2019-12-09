@@ -9,15 +9,13 @@
 1. Look if there is something useful in `global-deps.txt`
 
 ## Todo
-- Intellij?
 - Sublime Text
 - VSCode
     - ~/Library/Application Support/Code/Users/{*.json,snippets/*}
     - `code --list-extensions | xargs -L 1 echo code --install-extension > install-code-ext.sh` ??
 - Other desktop app preferences in `~/Library/Preferences/`?
-  - firefox
 - .osx (see Paul Irish dotfiles)
-- Global haskell packages : `stack exec ghc-pkg -- list` (hlint, hoogle, idrin, ...)
+- Global haskell packages: `stack exec ghc-pkg -- list` (hlint, hoogle, idrin, ghcide, ...)
 
 ## Useful Links
 - [webpro/awesome-dotfiles](https://github.com/webpro/awesome-dotfiles)
@@ -30,7 +28,7 @@
 - Haskell for mac
 - Irvue
 - Pocket
-- SnippetsLab
+- SnippetsLab (migrate to md files)
 
 ## Manual backup
 ### Firefox
