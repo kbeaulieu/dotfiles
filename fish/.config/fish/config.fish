@@ -38,7 +38,7 @@ set -g fish_greeting ""
 ###
 # Other sources
 source /usr/local/opt/asdf/asdf.fish
-direnv hook fish | source
+eval (direnv hook fish)
 for i in (command ls $__fish_config_dir/modules/*.fish)
     source $i
 end

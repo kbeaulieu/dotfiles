@@ -1,0 +1,42 @@
+#!/usr/bin/env fish
+
+set -g script_path (status --current-filename)
+set -g script_dir (dirname $script_path)/wallpaper-changer
+set -g earthviews_json $script_dir/earthview.json
+set -g wallpapers_dir $script_dir/wallpapers
+set -g osa_script $script_dir/change-wallpaper.scpt
+
+function _gen_random
+    set -l file_length (jq length $earthviews_json)
+    echo (random 0 $file_length)
+end
+
+function _download_wallpaper --argument-names url storage_path
+    echo Wallpaper not in cache. Fetching:
+    curl --progress-bar --output $storage_path $url
+end
+
+function _set_wallpaper -a wallpaper_path
+    osascript $osa_script $wallpaper_path
+end
+
+function main
+    set -l random_index (_gen_random)
+    set -l wallpaper_url (jq --raw-output .[$random_index].image $earthviews_json)
+    echo Selected wallpaper url: $wallpaper_url
+    set -l storage_path $wallpapers_dir/(basename $wallpaper_url)
+
+    if not test -e $storage_path
+        _download_wallpaper $wallpaper_url $storage_path
+    else
+        echo Cached wallpaper
+    end
+
+    _set_wallpaper $storage_path
+end
+
+# ajouter arg pour spécifier numéro dans url 2253 -> https://www.gstatic.com/prettyearth/assets/full/2253.jpg
+# ou la région/country : jq --raw-output --arg region "Ngari" '.[] | select(.region == $region) | .image' earthview.json
+main
+# Télécharger le json de github
+# déplacer la cache et le json dans un autre dossier standard : ~/.cache OU vs XDG ?

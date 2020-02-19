@@ -1,8 +1,10 @@
+abbr -g b brew
 abbr -g kc kubectl
 abbr -g gw "./gradlew"
 abbr -g jp jump
 abbr -g tf terraform
 
+alias bat "bat --theme TwoDark"
 
 ###
 # Source fish rc file
@@ -26,6 +28,9 @@ function cdp -d "cd to PROJECT_HOME directory which is usually defined in a .env
     cd $PROJECT_HOME
 end
 
+function rm_dss
+    find . -name '.DS_Store' -type f -delete
+end
 
 ###
 # ls with the exa command
