@@ -1,8 +1,8 @@
 set -g wiki_folder ~/dev/learning-resources/src/
 
 function wiki -d "Edit, view or create a personal wiki file"
-    set cmd $EDITOR
-    set file ""
+    set -l cmd $EDITOR
+    set -l file ""
 
     for option in $argv
         switch "$option"
@@ -13,7 +13,7 @@ function wiki -d "Edit, view or create a personal wiki file"
         end
     end
 
-    $cmd $wiki_folder/$file
+    command $cmd $wiki_folder/$file
 end
 
 complete -c wiki -f -a "(command ls $wiki_folder)"

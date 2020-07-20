@@ -8,11 +8,11 @@ function theme -a theme
     set -l alacritty_home ~/.config/alacritty
     set -l alacritty_themes_folder $alacritty_home/themes
     
-    set -l intellij_home $HOME/Library/Preferences/IntelliJIdea2019.2
+    #set -l intellij_home $HOME/Library/Preferences/IntelliJIdea2019.2
  
-    ln -sf $intellij_home/jba_config/colors.scheme.$theme.xml $intellij_home/jba_config/colors.scheme.xml
-    ln -sf $intellij_home/jba_config/laf-$theme.xml $intellij_home/jba_config/laf.xml
-    ln -sf $intellij_home/options/material_theme_$theme.xml $intellij_home/options/material_theme.xml
+    #ln -sf $intellij_home/jba_config/colors.scheme.$theme.xml $intellij_home/jba_config/colors.scheme.xml
+    #ln -sf $intellij_home/jba_config/laf-$theme.xml $intellij_home/jba_config/laf.xml
+    #ln -sf $intellij_home/options/material_theme_$theme.xml $intellij_home/options/material_theme.xml
     
     if test $theme = "dark"
         alacritty-colorscheme -C $alacritty_themes_folder -a one_dark.yaml
@@ -23,7 +23,7 @@ function theme -a theme
     end
 
     if pgrep idea > /dev/null
-        restart_process "idea"
+        #restart_process "idea"
     end
 end
 

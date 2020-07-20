@@ -21,9 +21,41 @@ function _set_wallpaper -a wallpaper_path
 end
 
 function main
-    set -l random_index (_gen_random)
-    set -l wallpaper_url (jq --raw-output .[$random_index].image $earthviews_json)
-    echo Selected wallpaper url: $wallpaper_url
+    set -l file_index
+    set -l wallpaper
+
+    getopts $argv | while read -l key value
+        switch $key
+            case u url-id
+                echo "in -u"
+                set file_index "?" 
+                set wallpaper (jq --arg url "https://www.gstatic.com/prettyearth/assets/full/$value.jpg" '.[] | select(.image == $url)' $earthviews_json)
+            case i index
+                echo "in -i"
+                set file_index $value
+                set wallpaper (jq .[$file_index] $earthviews_json)
+            case r random
+                set file_index (_gen_random)
+                set wallpaper (jq .[$file_index] $earthviews_json)
+            case s search
+                jq --arg c $value '.[] | select(.country == $c)' $earthviews_json
+                return
+        end
+    end
+
+    if test "$wallpaper" = ""
+        echo wallpaper not set
+        return
+    end
+
+    set -l wallpaper_url (echo $wallpaper | jq --raw-output .image)
+
+    echo Country: (echo $wallpaper | jq --raw-output .country), 
+    echo Region: (echo $wallpaper | jq --raw-output .region)
+    echo Map: (echo $wallpaper | jq --raw-output .map)
+    echo Url: $wallpaper_url, 
+    echo File Index: $file_index, 
+
     set -l storage_path $wallpapers_dir/(basename $wallpaper_url)
 
     if not test -e $storage_path
@@ -35,8 +67,9 @@ function main
     _set_wallpaper $storage_path
 end
 
-# ajouter arg pour spécifier numéro dans url 2253 -> https://www.gstatic.com/prettyearth/assets/full/2253.jpg
-# ou la région/country : jq --raw-output --arg region "Ngari" '.[] | select(.region == $region) | .image' earthview.json
-main
+main $argv
+
+# Par région ou country : jq --raw-output --arg region "Ngari" '.[] | select(.region == $region) | .image' earthview.json
+# si country et plusieurs régions, offrir un choix.
 # Télécharger le json de github
 # déplacer la cache et le json dans un autre dossier standard : ~/.cache OU vs XDG ?

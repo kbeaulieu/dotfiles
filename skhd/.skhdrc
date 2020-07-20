@@ -33,12 +33,13 @@ alt - 2 : chunkc tiling::monitor -f 2
 alt - 3 : chunkc tiling::monitor -f 3
 
 # Give focus to specific windows
+ctrl - f1 : open -a Dash
 f12 : open -a Alacritty
 ctrl - f12 : open -a "IntelliJ IDEA Ultimate"
 shift - f12 : open -a "Firefox Developer Edition"
-shift - f13 : open -a Spotify
-shift - f14 : open -a Slack
-ctrl - f1 : open -a Dash
+f13 : open -a Spotify
+f14 : open -a Slack
+f15 : open -a Pomotroid
 
 # Resize window
 shift + alt - a : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; \

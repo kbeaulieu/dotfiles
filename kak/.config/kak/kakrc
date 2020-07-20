@@ -6,7 +6,10 @@ source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "andreyorst/smarttab.kak"
 plug "stoand/kakoune-idris"
 plug "nhey/kakoune-fsharp"
+plug "KJ_Duncan/kakoune-kotlin.kak" domain "bitbucket.org"
+
+set-option global tabstop 4
 
 hook global WinCreate ^[^*]+$ %{editorconfig-load}
-hook global WinSetOption filetype=*  expandtab
+hook global WinSetOption .* expandtab
 

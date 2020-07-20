@@ -4,6 +4,8 @@
     excludesfile = ~/.gitignore-global
 [push]
     default = current
+[pull]
+    rebase = true
 [color]
     status = always
 [branch]

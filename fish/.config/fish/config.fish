@@ -11,11 +11,16 @@ end
 ###
 # Set global env
 set PATH \
-    ~/.local/bin \
-    ~/.config/yarn/global/node_modules/.bin \
+    $HOME/.local/bin \
+    $HOME/.config/yarn/global/node_modules/.bin \
+    $HOME/.cargo/bin \
+    /usr/local/bin \
     $PATH
 set -gx EDITOR kak
-set -gx JAVA_HOME /Users/kevenbeaulieu/.asdf/installs/java/openjdk-11.0.1/Contents/Home
+asdf current java 2>&1 > /dev/null
+if test $status -eq 0
+    set -x JAVA_HOME (dirname (dirname (asdf which java)))
+end
 set -gx IDRIS_LIBRARY_PATH /usr/local/Cellar/idris/1.3.2/share/x86_64-osx-ghc-8.6.5/idris-1.3.2/libs
 # fzf
 set -U FZF_ENABLE_OPEN_PREVIEW 1
@@ -27,6 +32,7 @@ set -u FZF_DEFAULT_OPTS "--height 40"
 # Customs
 set -gx MARKDOWN_VIEWER mdcat
 set -gx KAK_SESSION default
+set -gx PROJECT_HOME ~
 
 
 ###
